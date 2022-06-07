@@ -15,7 +15,7 @@ public class movement : MonoBehaviour
     void Start()
     {
         mcamera = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     // Update is called once per frame
@@ -25,22 +25,22 @@ public class movement : MonoBehaviour
        if (Input.GetKey("w"))
         {
             prb.velocity = new Vector3(mcamera.transform.forward.x*speed,prb.velocity.y, mcamera.transform.forward.z * speed);
-            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y, 0, 1);
+            prb.transform.rotation = new Quaternion(0, -mcamera.transform.rotation.y, 0, 1);
         }
         if (Input.GetKey("s"))
         {
             prb.velocity = new Vector3(mcamera.transform.forward.x * -speed, prb.velocity.y, mcamera.transform.forward.z * -speed);
-            prb.transform.rotation = new Quaternion(0, (mcamera.transform.rotation.y + 180), 0, 1);
+            prb.rotation = new Quaternion(0, (mcamera.transform.rotation.y + 180), 0, 0);
         }
         if (Input.GetKey("a"))
         {
             prb.velocity = new Vector3(mcamera.transform.right.x * -speed, prb.velocity.y, mcamera.transform.right.z * -speed);
-            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y, 0, 1);
+            prb.rotation = new Quaternion(0, mcamera.transform.rotation.y, 0, 1);
         }
         if (Input.GetKey("d"))
         {
             prb.velocity = new Vector3(mcamera.transform.right.x * speed, prb.velocity.y, mcamera.transform.right.z * speed);
-            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y, 0, 1);
+            prb.rotation = new Quaternion(0, mcamera.transform.rotation.y, 0, 1);
         }
 
 

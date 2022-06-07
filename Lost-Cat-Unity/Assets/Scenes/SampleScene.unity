@@ -546,10 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd01341c702fda42b31f25e90a138ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mouse_sensitivity: 4
-  Scroll_sensitivity: 2
-  OrbitDampening: 10
-  ScrollDampening: 6
+  Mouse_Sensitivity: 5
 --- !u!1 &1200543964
 GameObject:
   m_ObjectHideFlags: 0
