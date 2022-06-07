@@ -10,7 +10,6 @@ public class movement : MonoBehaviour
     public float X_Offset;
     public float Y_Offset;
     public float Z_Offset;
-    public float mspeed;
     
     // Start is called before the first frame update
     void Start()
@@ -30,18 +29,18 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKey("s"))
         {
-            prb.velocity = new Vector3(mcamera.transform.forward.x * speed, prb.velocity.y, mcamera.transform.forward.z * speed);
-            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y+180, 0, 1);
+            prb.velocity = new Vector3(mcamera.transform.forward.x * -speed, prb.velocity.y, mcamera.transform.forward.z * -speed);
+            prb.transform.rotation = new Quaternion(0, (mcamera.transform.rotation.y + 180), 0, 1);
         }
         if (Input.GetKey("a"))
         {
-            prb.velocity = new Vector3(mcamera.transform.right.x * speed, prb.velocity.y, mcamera.transform.right.z * speed);
-            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y-90, 0, 1);
+            prb.velocity = new Vector3(mcamera.transform.right.x * -speed, prb.velocity.y, mcamera.transform.right.z * -speed);
+            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y, 0, 1);
         }
         if (Input.GetKey("d"))
         {
             prb.velocity = new Vector3(mcamera.transform.right.x * speed, prb.velocity.y, mcamera.transform.right.z * speed);
-            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y+90, 0, 1);
+            prb.transform.rotation = new Quaternion(0, mcamera.transform.rotation.y, 0, 1);
         }
 
 
